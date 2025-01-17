@@ -61,7 +61,6 @@ def run_migrations_online() -> None:
 
     """
     connectable = session.engine
-
     with connectable.connect() as connection:
         context.configure(
             connection=connection, target_metadata=target_metadata

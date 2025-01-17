@@ -20,6 +20,3 @@ COPY pyproject.toml poetry.lock ./
 RUN poetry install
 
 COPY . .
-
-# Expose port
-EXPOSE 8000
