@@ -1,5 +1,4 @@
 from datetime import timedelta
-
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 from fastapi_utils.cbv import cbv
@@ -24,6 +23,25 @@ class UserController:
     user_service = UserService()
     settings = get_settings()
     db: Session = Depends(session.get_session)
+
+
+    @user_router.get("/", response_model=dict, status_code=HTTP_200_OK)
+    def get_users(self):
+        """
+        Get all users.
+        """
+        return {"message": "Hello World"}
+    
+
+    @user_router.get("/{id}", response_model=dict, status_code=HTTP_200_OK)
+    def get_user(self, id: str):
+        """
+        Get user by id.
+
+        - **id**: str
+        """
+        return {"message": "Hello World"+id}
+
 
     @user_router.post("/", response_model=ShowUser, status_code=HTTP_201_CREATED)
     def create_user(self, user: UserCreate):

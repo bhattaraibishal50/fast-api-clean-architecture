@@ -43,6 +43,6 @@ class App:
 app = App().start_application()
 
 
-#  @app.on_event("startup")
-#  async def startup_event():
-#      run_sql_migrations()
+# @app.on_event("startup")
+# async def startup_event():
+#     run_sql_migrations()
