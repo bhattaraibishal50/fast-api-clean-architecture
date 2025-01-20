@@ -11,8 +11,6 @@ from .base import Base
 
 class DBSession:
     """DB Session."""
-
-    print("Database ::",get_settings().DATABASE_URL)
     engine = create_engine(get_settings().DATABASE_URL, echo=True, pool_pre_ping=True)
 
     @lru_cache

@@ -29,7 +29,7 @@ class ShowUser(User):
     class Config:
         """Config Meta."""
 
-        orm_mode = True
+        from_attributes = True
 
 
 class UserLoginResponse(User):
@@ -41,4 +41,4 @@ class UserLoginResponse(User):
     class Config:
         """Config Meta."""
 
-        orm_mode = True
+        from_attributes = True
