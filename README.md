@@ -20,7 +20,7 @@ make migrate-up # to migrate migrations
 ```
 
 - API DOCS : http://localhost/docs
-- PGADMIN4: http://localhost:5050
+- adminer: http://localhost:5050
 
 Check `Makefile` for available commands
 
